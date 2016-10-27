@@ -23,6 +23,12 @@ public final class Equivalence {
         columnZero = new ArrayList();
     }
     
+	/**
+     *
+     * @param finalState1 estado final del primer autómata
+	 * @param finalState2 estado final del segundo autómata
+	 * @return si los autómatas son equivalentes (si sus estados son compatibles)
+     */
     public boolean isEquivalent(String finalState1, String finalState2){
         boolean compatible = false;
          for (Object element : columnZero) {
@@ -224,7 +230,7 @@ public final class Equivalence {
      * @param state
      * @param finalStates1
      * @param finalStates2
-     * @return
+     * @return si es compatible el estado actual (no todo el autómata, solo uno)
      */
     public boolean isCompatible(String state, String finalStates1, String finalStates2) {
         boolean isFinal1 = false, isFinal2 = false;
@@ -274,7 +280,7 @@ public final class Equivalence {
     /**
      *
      * @param finalStates
-     * @return
+     * @return un arreglo de estados
      */
     public String[] decomposeFinalStates(String finalStates) {
         int j = 0;
